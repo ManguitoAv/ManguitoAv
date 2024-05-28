@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Nuevo margen inferior */
+}
+
+nav {
+    margin-bottom: 20px; /* Nuevo margen inferior */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 60%; /* Cambia el porcentaje según lo que desees */
+    margin: 0 auto; /* Esto centrará el banner horizontalmente */
+    overflow: hidden; /* Para asegurar que el botón no se desborde del banner */
+}
+
+.saber-mas {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para hacer el texto más legible */
+    padding: 10px;
+}
+
+.saber-mas a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido {
+    margin: 20px auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        max-width: 100%; /* Para que el banner ocupe todo el ancho en dispositivos pequeños */
+    }
+
+    .saber-mas {
+        position: relative; /* Para que el botón esté dentro del flujo del documento en dispositivos pequeños */
+        width: 100%; /* Para que el botón ocupe todo el ancho en dispositivos pequeños */
+        text-align: center; /* Para centrar el botón en dispositivos pequeños */
+    }
+}
+
+.locales {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.local {
+    text-align: center;
+    margin-bottom: 20px; /* Agrega un margen inferior para separar los locales */
+    width: calc(50% - 20px); /* Ancho del 50% menos el margen lateral */
+    max-width: 300px; /* Ancho máximo del local */
+}
+
+.local img {
+    width: 100%;
+    height: auto;
+}
+
+.botones-local {
+    margin-top: 10px;
+}
+
+.botones-local a {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 768px) {
+    .local {
+        width: calc(100% - 20px); /* Ancho del 100% menos el margen lateral */
+    }
+}

@@ -1,0 +1,10 @@
+.row {
+    margin-bottom: 20px;
+  }
+  
+  .col {
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+  }
+  

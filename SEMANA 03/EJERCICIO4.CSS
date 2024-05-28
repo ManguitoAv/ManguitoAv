@@ -1,0 +1,72 @@
+/* Estilos de la rejilla */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .item {
+    flex: 0 0 auto;
+    width: 100%; /* Por defecto, 1 columna por fila en dispositivos pequeños */
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 540px) {
+    .item {
+      width: calc(100% / 3); /* 2 columnas por fila en dispositivos medianos */
+    }
+  }
+
+  /* Estilos para dispositivos medianos */
+  @media (min-width: 720px) {
+    .item {
+      width: calc(100% / 4); /* 2 columnas por fila en dispositivos medianos */
+    }
+  }
+  
+  /* Estilos para dispositivos grandes */
+  @media (min-width: 960px) {
+    .item {
+      width: calc(100% / 6); /* 3 columnas por fila en dispositivos grandes */
+    }
+  }
+  
+  /* Estilos para dispositivos extra grandes */
+  @media (min-width: 1140px) {
+    .item {
+      width: calc(100% / 12); /* 4 columnas por fila en dispositivos extra grandes */
+    }
+  }
+  
+  /* Estilos de ejemplo para cada columna */
+  .bg-primary {
+    background-color: #007bff;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d;
+  }
+  
+  .bg-success {
+    background-color: #28a745;
+  }
+  
+  .bg-danger {
+    background-color: #dc3545;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107;
+  }
+  
+  .bg-info {
+    background-color: #17a2b8;
+  }
+  
+  .bg-dark {
+    background-color: #343a40;
+  }
+  

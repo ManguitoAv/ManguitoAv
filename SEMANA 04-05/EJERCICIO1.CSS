@@ -1,0 +1,212 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn {
+    border: none; /* Remove borders */
+    border-radius: 10px;
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+  }
+
+  .container {
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Si necesitas centrar el botón verticalmente también, puedes añadir este estilo */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajusta la altura según sea necesario */
+}
+
+  /* Green */
+  .success {background-color: #04AA6D;} 
+  .success:hover {background-color: #46a049;}
+   /* Blue */
+  .info {background-color: #2196F3;}
+  .info:hover {background: #0b7dda;}
+  /* Orange */
+  .warning {background-color: #ff9800;} 
+  .warning:hover {background: #e68a00;}
+  /* Red */
+  .danger {background-color: #f44336;} 
+  .danger:hover {background: #da190b;}
+  /* Gray */
+  .default {background-color: #e7e7e7; color: black;} 
+  .default:hover {background: #ddd;}
+.titulo{
+    font-size: 2rem;
+    color: rgb(7, 18, 66);
+    text-align: center;
+}
+#parrafo1{
+    font-size: 1rem;
+    color: cadetblue;
+    text-align: center;
+}
+
+form {
+    /* Centrar el formulario en la página */
+    margin: 0 auto;
+    width: 400px;
+    /* Esquema del formulario */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: rgb(110, 232, 45);
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+  }
+  input,
+  textarea {
+    /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+       Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+    font: 1em sans-serif;
+    /* Tamaño uniforme del campo de texto */
+    width: 300px;
+    box-sizing: border-box;
+    /* Hacer coincidir los bordes del campo del formulario */
+    border: 1px solid #999;
+    border-radius: 0.3em;
+  }
+  input:focus,
+  textarea:focus {
+    /* Destacado adicional para elementos que tienen el cursor */
+    border-color: #000;
+  }
+  textarea {
+    /* Alinear los campos de texto multilínea con sus etiquetas */
+    vertical-align: top;
+    /* Proporcionar espacio para escribir texto */
+    height: 5em;
+  }
+  .button {
+    /* Alinear los botones con los campos de texto */
+    padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+  }
+  
+  button {
+    /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+       entre las etiquetas y sus campos de texto */
+    margin: 1em;
+  }
+button {
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn {
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.success {
+    background-color: #0d336f;
+}
+.btn.danger {
+    background-color: #dc3545;
+}
+.btn:hover {
+    background-color: #6c757d;
+}
+/* Estilos para la tabla */
+#studentsTable {
+
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+}
+#studentsTable th, #studentsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#studentsTable th {
+    background-color: #f2f2f2;
+}
+#studentsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#fillButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#fillButton:hover {
+    background-color: #0056b3;
+}
+
+#tablaEstudiantes {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+#tablaEstudiantes th, #tablaEstudiantes td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#tablaEstudiantes th {
+    background-color: #f2f2f2;
+}
+#tablaEstudiantes tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#fillButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#fillButton:hover {
+    background-color: #0056b3;
+}
+#fillButton1 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#fillButton1:hover {
+    background-color: #0056b3;
+}
+

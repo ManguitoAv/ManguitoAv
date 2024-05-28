@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EJERCICIO1.CSS">
+</head>
+<body>
+
+    <div class="container">
+        <h3 class="titulo">Manipular el HTML con un boton</h3>
+        <p id="parrafo1">Texto1</p>
+        <div class="button-container">
+            <button type="button" onclick="modificandoDom()" class="btn success">Cambiar DOM</button>
+        </div>
+    </div>
+    
+    <h3 class="titulo">Manipular el HTML con AddEventListener</h3>
+    <form action="">
+        <label for="">Ingrese un texto:</label>
+        <input type="text" name="" id="idinput">
+        <p id="idparrafo">Texto2</p>
+    </form>
+    
+    <script>
+        function modificandoDom() {
+            let parrafo1 = document.getElementById('parrafo1');
+            parrafo1.innerHTML = Date();
+        }
+    
+        let txt = document.getElementById("idinput");
+        txt.addEventListener("keyup", cambiandoParrafo);
+    
+        function cambiandoParrafo() {
+            let parrafo1 = document.getElementById("idparrafo");
+            parrafo1.innerHTML = txt.value;
+        }
+    </script>
+    
+    <h3 class="titulo">Suma de números</h3>
+    <form action="">
+        <label for="field1">X</label> <input id="num1" type="text" value="">
+        <label for="field2">Y</label> <input id="num2" type="text" value="">
+        <button type="button" onclick="calculateSum()" class="btn success">Sumar</button>  
+        <p id="sumando">Result:</p>
+    </form>
+    <script>
+        function calculateSum() {
+            let x,y,suma,text;  
+            x = document.getElementById("num1").value;  
+            y = document.getElementById("num2").value;  
+            if (isNaN(x) || isNaN(y)) {  
+                text = "Es necesarios introducir dos números válidos";  
+            } else {  
+                suma=parseFloat(x)+parseFloat(y);  
+                text= suma;  
+            }
+            document.getElementById("sumando").innerHTML = text;  
+        }
+    </script>
+
+    <h3 class="titulo">Datos de Estudiantes</h3>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellidos</th>
+                <th>Nombres</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody id="studentsBody">
+
+        </tbody>
+    </table>
+    <button id="fillButton">Llenar Tabla</button>
+    <script>
+
+    const studentsData = [
+    { id: 1, apellidos: "Martínez", nombres: "Carlos", direccion: "Calle 456", telefono: "456-789-0123" },
+    { id: 2, apellidos: "González", nombres: "Ana", direccion: "Av. Bolívar", telefono: "234-567-8901" },
+    { id: 3, apellidos: "Rodríguez", nombres: "Luis", direccion: "Las Margaritas", telefono: "789-012-3456" },
+    { id: 4, apellidos: "Hernández", nombres: "Sofía", direccion: "Calle Principal", telefono: "901-234-5678" },
+    { id: 6, apellidos: "Pérez", nombres: "Diego", direccion: "Av. Libertador", telefono: "678-901-2345" },
+    { id: 7, apellidos: "Díaz", nombres: "Laura", direccion: "Av. Centenario", telefono: "345-678-9012" },
+    { id: 8, apellidos: "Sánchez", nombres: "Javier", direccion: "Calle 789", telefono: "012-345-6789" },
+    { id: 9, apellidos: "Romero", nombres: "Marta", direccion: "Av. Juárez", telefono: "890-123-4567" },
+    { id: 10, apellidos: "Fernández", nombres: "Pedro", direccion: "Calle 321", telefono: "567-890-1234" },
+    ];
+    // Función para llenar la tabla
+    function fillStudentsTable() {
+    const tableBody = document.getElementById('studentsBody');
+    tableBody.innerHTML = '';
+    studentsData.forEach(student => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${student.id}</td>
+            <td>${student.apellidos}</td>
+            <td>${student.nombres}</td>
+            <td>${student.direccion}</td>
+            <td>${student.telefono}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+    }
+    // Obtener el botón y agregarle el evento click
+    const fillButton = document.getElementById('fillButton');
+    fillButton.addEventListener('click', fillStudentsTable);
+    </script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Estudiantes</title>
+</head>
+<body>
+
+<h3 class="titulo">Tabla de Estudiantes</h3>
+<table id="tablaEstudiantes">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Apellidos</th>
+        <th>Nombres</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+    </tr>
+</thead>
+<tbody>
+    <!-- Aquí se insertarán los datos dinámicamente -->
+</tbody>
+</table>
+
+<button id="fillButton1">Mostrar Datos</button>
+
+<script>
+// EJERCICIO 5: Definir la clase Estudiante
+class Estudiante {
+    constructor(id, apellidos, nombres, direccion, telefono) {
+        this.id = id;
+        this.apellidos = apellidos;
+        this.nombres = nombres;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+}
+// Crear un array con 10 objetos de tipo Estudiante (vacío inicialmente)
+const estudiantes = [];
+// Función para mostrar los datos en la tabla
+function mostrarDatosEnTabla() {
+    const tbody = document.querySelector('#tablaEstudiantes tbody');
+    tbody.innerHTML = ''; // Limpiar el contenido actual de la tabla
+    // Iterar sobre cada estudiante y agregar una fila a la tabla
+    estudiantes.forEach(estudiante => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${estudiante.id}</td>
+            <td>${estudiante.apellidos}</td>
+            <td>${estudiante.nombres}</td>
+            <td>${estudiante.direccion}</td>
+            <td>${estudiante.telefono}</td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+// Obtener el botón
+const fillButton1 = document.getElementById('fillButton1');
+// Agregar un evento click al botón
+fillButton1.addEventListener('click', function() {
+    // Crear un nuevo conjunto de estudiantes (esto simula cargar los datos)
+    estudiantes.push(
+        new Estudiante(1, "López", "Juan", "Calle 123", "123-456-7890"),
+        new Estudiante(2, "Gómez", "María", "Av. Principal", "987-654-3210"),
+        new Estudiante(3, "Martínez", "Carlos", "Avenida de los Bosques", "456-789-0123"),
+        new Estudiante(4, "Rodríguez", "Laura", "Calle de las Rosas", "789-012-3456"),
+        new Estudiante(5, "González", "Diego", "Paseo del Sol", "012-345-6789"),
+        new Estudiante(6, "Hernández", "Sofía", "Calle del Río", "234-567-8901"),
+        new Estudiante(7, "Pérez", "Ana", "Avenida de los Ángeles", "567-890-1234"),
+        new Estudiante(8, "Díaz", "Pedro", "Carrera del Mar", "890-123-4567"),
+        new Estudiante(9, "Sánchez", "Luis", "Camino de la Luna", "345-678-9012"),
+        new Estudiante(10, "Romero", "Marta", "Paseo de las Estrellas", "678-901-2345")
+    );
+    // Mostrar los datos en la tabla
+    mostrarDatosEnTabla();
+});
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

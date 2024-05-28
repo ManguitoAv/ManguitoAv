@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="EJERCICIO26.CSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#"><i class='bx bx-home'></i> <span class="sidebar-text">Inicio</span></a></li>
+            <li><a href="#"><i class='bx bx-user'></i> <span class="sidebar-text">Perfil</span></a></li>
+            <li><a href="#"><i class='bx bx-message-square-detail'></i> <span class="sidebar-text">Mensajes</span></a></li>
+            <li><a href="#"><i class='bx bx-book'></i> <span class="sidebar-text">Libros</span></a></li>
+        </ul>
+        <label class="switch">
+            <input id="toggleSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="content" id="content">
+        <button id="toggleSidebarBtn"><i class="fas fa-bars"></i></button>
+        <h2>Contenido Principal</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
